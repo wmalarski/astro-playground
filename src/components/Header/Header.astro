@@ -1,6 +1,20 @@
 ---
----
-<header class="bg-white">
-  <a href="/">Product</a>
-</header>
+import SidebarToggle from "./SidebarToggle/SidebarToggle";
 
+---
+
+<header class="bg-white">
+  <nav class="nav-wrapper" title="Top Navigation">
+    <div class="menu-toggle">
+      <SidebarToggle client:idle>
+        <span>A</span>
+      </SidebarToggle>
+    </div>
+    <div class="logo flex">
+      <a href="/">
+        <a href="/">Product</a>
+      </a>
+    </div>
+    <div style="flex-grow: 1;"></div>
+  </nav>
+</header>
