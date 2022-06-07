@@ -8,7 +8,7 @@
 
 Inside of your Astro project, you'll see the following folders and files:
 
-```
+```txt
 /
 ├── public/
 │   └── favicon.ico
@@ -40,3 +40,25 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+## Plan to learn
+
+* Header
+  * [ ] Header with links to # anchors
+  * [ ] Header changes color
+  * [ ] Header sticks to top when scrolling
+  * [ ] Menu on hover
+  * [ ] Responsive
+  * [ ] Language change
+* Hero
+  * [ ] Scroll to next card
+  * [ ] Carousel
+  * [ ] Accordions
+  * [ ] Image sliding when scrolling
+  * [ ] Email form
+* Footer
+  * [ ] Product info
+  * [ ] Cookies info
+  * [ ] Contact button
+* Analytics
+  * [ ] Google analytics
