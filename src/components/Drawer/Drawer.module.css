@@ -1,0 +1,7 @@
+.drawer {
+  display: hidden;
+}
+
+.drawer[aria-hidden="false"] {
+  display: block;
+}
