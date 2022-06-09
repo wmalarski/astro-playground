@@ -1,16 +1,14 @@
 ---
 import Drawer from "../Drawer/Drawer";
-import SidebarToggle from "./SidebarToggle/SidebarToggle";
+import MobileMenu from "./MobileMenu/MobileMenu.astro";
 
 ---
 
 <header class="bg-white">
   <nav class="nav-wrapper" title="Top Navigation">
-    <div class="menu-toggle">
-      <SidebarToggle client:idle>
-        <span>A</span>
-      </SidebarToggle>
-    </div>
+    <button type="button" id="menubtn">
+      <span>Open navigation menu</span>
+    </button>
     <div class="logo flex">
       <a href="/">
         <a href="/">Product</a>
@@ -18,11 +16,17 @@ import SidebarToggle from "./SidebarToggle/SidebarToggle";
     </div>
     <div style="flex-grow: 1;"></div>
   </nav>
-
-  <Drawer id="side-drawer">
-    <div>
-      AA
-    </div>
-  </Drawer>
-
 </header>
+
+<Drawer client:idle id="menudrawer">
+  <MobileMenu />
+</Drawer>
+
+<script>
+  const menuBtn = document.getElementById('menubtn');
+
+  menuBtn.addEventListener('click', (event) => {
+    event.stopPropagation();
+    window.dispatchEvent(new CustomEvent('drawer:open', { detail: 'menudrawer' }));
+  });
+</script>

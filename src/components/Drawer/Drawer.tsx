@@ -32,7 +32,7 @@ const Drawer: FunctionalComponent<Props> = ({ children, id }) => {
     return () => {
       window.removeEventListener("drawer:open", callback);
     };
-  }, []);
+  }, [id]);
 
   return (
     <div className={Styles.drawer} aria-hidden={!isVisible}>

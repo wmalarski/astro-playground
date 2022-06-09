@@ -1,0 +1,22 @@
+<header class="bg-white">
+  <nav class="nav-wrapper" title="Top Navigation">
+    <div class="logo flex">
+      <a href="/">
+        <a href="/">Product</a>
+      </a>
+    </div>
+    <div style="flex-grow: 1;"></div>
+  </nav>
+  <button type="button" id="menuclose">
+    <span>Close navigation menu</span>
+  </button>
+</header>
+
+<script type="module">
+  const closeBtn = document.getElementById('menuclose');
+
+  closeBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    window.dispatchEvent(new CustomEvent('drawer:close', { detail: 'menudrawer' }))
+  }, false);
+</script>
