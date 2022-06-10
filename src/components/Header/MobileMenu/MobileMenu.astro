@@ -1,9 +1,11 @@
-<header class="bg-white">
+---
+
+---
+
+<header class="mobile-menu">
   <nav class="nav-wrapper" title="Top Navigation">
     <div class="logo flex">
-      <a href="/">
-        <a href="/">Product</a>
-      </a>
+      <a href="/">Product</a>
     </div>
     <div style="flex-grow: 1;"></div>
   </nav>
@@ -20,3 +22,15 @@
     window.dispatchEvent(new CustomEvent('drawer:close', { detail: 'menudrawer' }))
   }, false);
 </script>
+
+<style>
+  .mobile-menu,
+  .nav-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-wrapper {
+    padding: var(--space-md);
+  }
+</style>
