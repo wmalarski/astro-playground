@@ -1,4 +1,5 @@
 ---
+import { Icon } from "astro-icon";
 import Drawer from "../Drawer/Drawer";
 import MobileMenu from "./MobileMenu/MobileMenu.astro";
 
@@ -15,7 +16,8 @@ import MobileMenu from "./MobileMenu/MobileMenu.astro";
     <a class="desktop-link" href="/#details">Details</a>
     <a class="desktop-link" href="/#contact">Contact</a>
     <button class="mobile-menu" type="button" id="menubtn">
-      <span>Open navigation menu</span>
+      <span class="visually-hidden sr-only">Open navigation menu</span>
+      <Icon name="tabler:menu-2" size={24} />
     </button>
   </nav>
 </header>

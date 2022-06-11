@@ -5,4 +5,9 @@ import preact from "@astrojs/preact";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), preact()],
+  vite: {
+    ssr: {
+      external: ["svgo"],
+    },
+  },
 });

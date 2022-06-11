@@ -1,4 +1,5 @@
 ---
+import { Icon } from "astro-icon";
 
 ---
 
@@ -8,7 +9,8 @@
       <a href="/">Product</a>
     </div>
     <button type="button" id="menuclose">
-      <span>Close navigation menu</span>
+      <span class="visually-hidden sr-only">Close navigation menu</span>
+      <Icon name="tabler:x" size={24} />
     </button>
   </header>
   <a class="link" href="/#accordion">Accordion</a>
@@ -30,6 +32,7 @@
   .nav-wrapper {
     display: flex;
     flex-direction: column;
+    justify-content: center;
   }
 
   .mobile-header {
@@ -39,7 +42,7 @@
   }
 
   .nav-wrapper {
-    padding: var(--space-md);
+    padding: var(--space-md) var(--space-lg);
   }
 
   .link {
