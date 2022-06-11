@@ -2,35 +2,49 @@
 
 ---
 
-<header class="mobile-menu">
-  <nav class="nav-wrapper" title="Top Navigation">
+<nav class="nav-wrapper" title="Top Navigation">
+  <header class="mobile-header">
     <div class="logo flex">
       <a href="/">Product</a>
     </div>
-    <div style="flex-grow: 1;"></div>
-  </nav>
-  <button type="button" id="menuclose">
-    <span>Close navigation menu</span>
-  </button>
-</header>
+    <button type="button" id="menuclose">
+      <span>Close navigation menu</span>
+    </button>
+  </header>
+  <a class="link" href="/#accordion">Accordion</a>
+  <a class="link" href="/#carousel">Carousel</a>
+  <a class="link" href="/#details">Details</a>
+  <a class="link" href="/#contact">Contact</a>
+</nav>
 
 <script type="module">
+  console.log("drawer:close")
   const closeBtn = document.getElementById('menuclose');
 
   closeBtn.addEventListener('click', (event) => {
+    console.log("drawer:close:click")
     event.preventDefault();
     window.dispatchEvent(new CustomEvent('drawer:close', { detail: 'menudrawer' }))
   }, false);
 </script>
 
 <style>
-  .mobile-menu,
   .nav-wrapper {
     display: flex;
     flex-direction: column;
   }
 
+  .mobile-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
   .nav-wrapper {
+    padding: var(--space-md);
+  }
+
+  .link {
     padding: var(--space-md);
   }
 </style>
