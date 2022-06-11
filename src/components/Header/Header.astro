@@ -9,11 +9,11 @@ import MobileMenu from "./MobileMenu/MobileMenu.astro";
     <div class="logo">
       <a href="/">Product</a>
     </div>
+    <div class="spacer"></div>
     <a class="desktop-link" href="/#accordion">Accordion</a>
     <a class="desktop-link" href="/#carousel">Carousel</a>
     <a class="desktop-link" href="/#details">Details</a>
     <a class="desktop-link" href="/#contact">Contact</a>
-    <div class="spacer"></div>
     <button class="mobile-menu" type="button" id="menubtn">
       <span>Open navigation menu</span>
     </button>
@@ -25,11 +25,9 @@ import MobileMenu from "./MobileMenu/MobileMenu.astro";
 </Drawer>
 
 <script type="module">
-  console.log("drawer:open")
   const menuBtn = document.getElementById('menubtn');
 
   menuBtn.addEventListener('click', (event) => {
-    console.log("drawer:open:click")
     event.stopPropagation();
     window.dispatchEvent(new CustomEvent('drawer:open', { detail: 'menudrawer' }));
   }, false);

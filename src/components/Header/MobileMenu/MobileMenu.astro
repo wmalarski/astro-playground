@@ -18,11 +18,9 @@
 </nav>
 
 <script type="module">
-  console.log("drawer:close")
   const closeBtn = document.getElementById('menuclose');
 
   closeBtn.addEventListener('click', (event) => {
-    console.log("drawer:close:click")
     event.preventDefault();
     window.dispatchEvent(new CustomEvent('drawer:close', { detail: 'menudrawer' }))
   }, false);
