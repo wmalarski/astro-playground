@@ -1,0 +1,27 @@
+{
+  "accordion": {
+    "title": "Accordion"
+  },
+  "carousel": {
+    "title": "Carousel"
+  },
+  "contact": {
+    "title": "Contact"
+  },
+  "details": {
+    "title": "Details"
+  },
+  "footer": {
+    "title": "Footer"
+  },
+  "header": {
+    "title": "Top Navigation",
+    "pageName": "Product",
+    "close": "Close navigation menu",
+    "open": "Open navigation menu",
+    "accordion": "Accordion",
+    "carousel": "Carousel",
+    "contact": "Contact",
+    "details": "Details"
+  }
+}

@@ -1,22 +1,23 @@
 ---
 import { Icon } from "astro-icon";
+import { t } from "i18next";
 
 ---
 
-<nav class="flex flex-col text-center py-3 px-4 gap-3" title="Top Navigation">
+<nav class="flex flex-col text-center py-3 px-4 gap-3" title={t("header.title")}>
   <header class="flex flex-row justify-between gap-2">
     <div class="logo flex">
-      <a href="/">Product</a>
+      <a href="/">{t("header.pageName")}</a>
     </div>
     <button type="button" id="menuclose">
-      <span class="visually-hidden sr-only">Close navigation menu</span>
+      <span class="visually-hidden sr-only">{t("header.close")}</span>
       <Icon name="tabler:x" size={24} />
     </button>
   </header>
-  <a href="/#accordion">Accordion</a>
-  <a href="/#carousel">Carousel</a>
-  <a href="/#details">Details</a>
-  <a href="/#contact">Contact</a>
+  <a href="/#accordion">{t("header.accordion")}</a>
+  <a href="/#carousel">{t("header.carousel")}</a>
+  <a href="/#details">{t("header.details")}</a>
+  <a href="/#contact">{t("header.contact")}</a>
 </nav>
 
 <script type="module">

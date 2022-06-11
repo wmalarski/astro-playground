@@ -1,26 +1,8 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header/Header.astro';
-import Hero from '../components/Hero/Hero.astro';
-import Accordion from '../components/Accordion/Accordion.astro';
-import Carousel from '../components/Carousel/Carousel.astro';
-import Details from '../components/Details/Details.astro';
-import Contact from '../components/Contact/Contact.astro';
-import Footer from '../components/Footer/Footer.astro';
-import SkipToContent from '../components/SkipToContent/SkipToContent.astro';
+import Index from '../templates/Index/Index.astro';
+import i18next from "i18next";
 
-const value = Math.floor(Math.random() * 100);
+i18next.changeLanguage("en");
 ---
 
-<Layout title={`Welcome to Astro.${value}`}>
-	<SkipToContent />
-	<Header />
-	<main>
-		<Hero />
-		<Accordion />
-		<Carousel />
-		<Details />
-		<Contact />
-	</main>
-	<Footer />
-</Layout>
+<Index />

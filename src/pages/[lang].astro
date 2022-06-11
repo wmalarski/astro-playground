@@ -1,0 +1,20 @@
+---
+import i18next from "i18next";
+import Index from "../templates/Index/Index.astro";
+
+export const getStaticPaths = () => {
+  const first = i18next.options.supportedLngs[0];
+
+  const languageRoutes = i18next.languages
+    .filter(lang => lang !== first)
+    .map(lang => ({ params: { lang } }))
+
+  return languageRoutes;
+}
+
+const { lang } = Astro.params;
+
+i18next.changeLanguage(lang as string);
+---
+
+<Index />

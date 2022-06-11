@@ -310,6 +310,13 @@
     "@babel/plugin-syntax-jsx" "^7.17.12"
     "@babel/types" "^7.17.12"
 
+"@babel/runtime@^7.17.2":
+  version "7.18.3"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.18.3.tgz#c7b654b57f6f63cf7f8b418ac9ca04408c4579f4"
+  integrity sha512-38Y8f7YUhce/K7RMwTp7m0uCumpv9hZkitCbBClqQIow1qSbCvGkcegKOXpEWCQLfWmevgRiWokZ1GkpfhbZug==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/template@^7.16.7":
   version "7.16.7"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.16.7.tgz#8d126c8701fde4d66b264b3eba3d96f07666d155"
@@ -649,6 +656,15 @@ ast-types@0.14.2, ast-types@^0.14.2:
   dependencies:
     tslib "^2.0.1"
 
+astro-i18next@^1.0.0-beta.2:
+  version "1.0.0-beta.2"
+  resolved "https://registry.yarnpkg.com/astro-i18next/-/astro-i18next-1.0.0-beta.2.tgz#b4dddf45d9ec9eb95ad1a10cfa3aa760c9300e7c"
+  integrity sha512-ayGymreprDal/5zcTDpEVTDQxY75poKPrUCl5tle3YwpO/VfAmDGFe8R9rI/A7XzZ/HOy6/P3gzn9jSTcavywA==
+  dependencies:
+    country-code-to-flag-emoji "^1.1.0"
+    i18next "^21.8.8"
+    iso-639-1 "^2.1.14"
+
 astro-icon@^0.7.1:
   version "0.7.1"
   resolved "https://registry.yarnpkg.com/astro-icon/-/astro-icon-0.7.1.tgz#f1534391b4bf83815c1fa09df2a2744308a7575c"
@@ -963,6 +979,11 @@ convert-source-map@^1.7.0:
   integrity sha512-+OQdjP49zViI/6i7nIJpA8rAl4sV/JdPfU9nZs3VqOwGIgizICvuN2ru6fMd+4llL0tar18UYJXfZ/TWtmhUjA==
   dependencies:
     safe-buffer "~5.1.1"
+
+country-code-to-flag-emoji@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/country-code-to-flag-emoji/-/country-code-to-flag-emoji-1.1.0.tgz#073ea57be8b05a66ac2eeb55897f36097e56212f"
+  integrity sha512-S+UzvEKOrfDUwhN8YyMDgiQyYCVUVNBVtt4NUFwDz1nQ8mWo2cqA6Rkvb9uA90EsHS+hGIolpLGVrYnC2IQVKA==
 
 cross-spawn@^7.0.3:
   version "7.0.3"
@@ -1752,6 +1773,13 @@ human-signals@^3.0.1:
   resolved "https://registry.yarnpkg.com/human-signals/-/human-signals-3.0.1.tgz#c740920859dafa50e5a3222da9d3bf4bb0e5eef5"
   integrity sha512-rQLskxnM/5OCldHo+wNXbpVgDn5A17CUoKX+7Sokwaknlq7CdSnphy0W39GU8dw59XiCXmFXDg4fRuckQRKewQ==
 
+i18next@^21.8.8:
+  version "21.8.9"
+  resolved "https://registry.yarnpkg.com/i18next/-/i18next-21.8.9.tgz#c79edd5bba61e0a0d5b43a93d52e2d13a526de82"
+  integrity sha512-PY9a/8ADVmnju1tETeglbbVQi+nM5pcJQWm9kvKMTE3GPgHHtpDsHy5HQ/hccz2/xtW7j3vuso23JdQSH0EttA==
+  dependencies:
+    "@babel/runtime" "^7.17.2"
+
 ieee754@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.2.1.tgz#8eb7a10a63fff25d15a57b001586d177d1b0d352"
@@ -1995,6 +2023,11 @@ isexe@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
   integrity sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==
+
+iso-639-1@^2.1.14:
+  version "2.1.15"
+  resolved "https://registry.yarnpkg.com/iso-639-1/-/iso-639-1-2.1.15.tgz#20cf78a4f691aeb802c16f17a6bad7d99271e85d"
+  integrity sha512-7c7mBznZu2ktfvyT582E2msM+Udc1EjOyhVRE/0ZsjD9LBtWSm23h3PtiRh2a35XoUsTQQjJXaJzuLjXsOdFDg==
 
 js-tokens@^4.0.0:
   version "4.0.0"
@@ -3050,6 +3083,11 @@ recast@^0.20.5:
     esprima "~4.0.0"
     source-map "~0.6.1"
     tslib "^2.0.1"
+
+regenerator-runtime@^0.13.4:
+  version "0.13.9"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.9.tgz#8925742a98ffd90814988d7566ad30ca3b263b52"
+  integrity sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==
 
 regexp.prototype.flags@^1.4.3:
   version "1.4.3"
