@@ -6,7 +6,7 @@ import MobileMenu from "./MobileMenu/MobileMenu.astro";
 
 ---
 
-<header class="bg-white sticky w-full py-3 px-4">
+<header id="topheader" class="sticky top-0 left-0 right-0 py-3 px-4 z-10 header-stuck">
   <nav class="flex flex-row gap-2" title="Top Navigation">
     <div class="logo">
       <a href="/">Product</a>
@@ -29,9 +29,29 @@ import MobileMenu from "./MobileMenu/MobileMenu.astro";
 
 <script type="module">
   const menuBtn = document.getElementById('menubtn');
+  const topHeader = document.getElementById('topheader');
 
   menuBtn.addEventListener('click', (event) => {
     event.stopPropagation();
     window.dispatchEvent(new CustomEvent('drawer:open', { detail: 'menudrawer' }));
   }, false);
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY <= 65) {
+      topHeader.removeAttribute('stuck')
+    }
+    if (window.scrollY > 65) {
+      topHeader.setAttribute('stuck', '')
+    }
+  })
 </script>
+
+<style>
+  .header-stuck {
+    background-color: var(--color-header);
+  }
+
+  .header-stuck[stuck] {
+    background-color: var(--color-header-stuck);
+  }
+</style>

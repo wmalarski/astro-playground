@@ -44,11 +44,11 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 ## Plan to learn
 
 * Header
-  * [ ] Header with links to # anchors
-  * [ ] Header changes color
-  * [ ] Header sticks to top when scrolling
+  * [x] Header with links to # anchors
+  * [x] Header changes color
+  * [x] Header sticks to top when scrolling
   * [ ] Menu on hover
-  * [ ] Responsive
+  * [x] Responsive
   * [ ] Language change
 * Hero
   * [ ] Scroll to next card
@@ -56,6 +56,7 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
   * [ ] Accordions
   * [ ] Image sliding when scrolling
   * [ ] Email form
+  * [ ] GSAP
 * Footer
   * [ ] Product info
   * [ ] Cookies info
