@@ -3,8 +3,8 @@ import { Icon } from "astro-icon";
 
 ---
 
-<nav class="nav-wrapper" title="Top Navigation">
-  <header class="mobile-header">
+<nav class="flex flex-col text-center py-3 px-4 gap-3" title="Top Navigation">
+  <header class="flex flex-row justify-between gap-2">
     <div class="logo flex">
       <a href="/">Product</a>
     </div>
@@ -13,10 +13,10 @@ import { Icon } from "astro-icon";
       <Icon name="tabler:x" size={24} />
     </button>
   </header>
-  <a class="link" href="/#accordion">Accordion</a>
-  <a class="link" href="/#carousel">Carousel</a>
-  <a class="link" href="/#details">Details</a>
-  <a class="link" href="/#contact">Contact</a>
+  <a href="/#accordion">Accordion</a>
+  <a href="/#carousel">Carousel</a>
+  <a href="/#details">Details</a>
+  <a href="/#contact">Contact</a>
 </nav>
 
 <script type="module">
@@ -27,25 +27,3 @@ import { Icon } from "astro-icon";
     window.dispatchEvent(new CustomEvent('drawer:close', { detail: 'menudrawer' }))
   }, false);
 </script>
-
-<style>
-  .nav-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .mobile-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .nav-wrapper {
-    padding: var(--space-md) var(--space-lg);
-  }
-
-  .link {
-    padding: var(--space-md);
-  }
-</style>

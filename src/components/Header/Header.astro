@@ -1,21 +1,22 @@
 ---
 import { Icon } from "astro-icon";
 import Drawer from "../Drawer/Drawer";
+import DesktopLink from "./DesktopLink/DesktopLink.astro";
 import MobileMenu from "./MobileMenu/MobileMenu.astro";
 
 ---
 
-<header class="header">
-  <nav class="nav-wrapper" title="Top Navigation">
+<header class="bg-white sticky w-full py-3 px-4">
+  <nav class="flex flex-row gap-2" title="Top Navigation">
     <div class="logo">
       <a href="/">Product</a>
     </div>
-    <div class="spacer"></div>
-    <a class="desktop-link" href="/#accordion">Accordion</a>
-    <a class="desktop-link" href="/#carousel">Carousel</a>
-    <a class="desktop-link" href="/#details">Details</a>
-    <a class="desktop-link" href="/#contact">Contact</a>
-    <button class="mobile-menu" type="button" id="menubtn">
+    <div class="grow"></div>
+    <DesktopLink href="/#accordion">Accordion</DesktopLink>
+    <DesktopLink href="/#carousel">Carousel</DesktopLink>
+    <DesktopLink href="/#details">Details</DesktopLink>
+    <DesktopLink href="/#contact">Contact</DesktopLink>
+    <button class="block sm:hidden" type="button" id="menubtn">
       <span class="visually-hidden sr-only">Open navigation menu</span>
       <Icon name="tabler:menu-2" size={24} />
     </button>
@@ -34,40 +35,3 @@ import MobileMenu from "./MobileMenu/MobileMenu.astro";
     window.dispatchEvent(new CustomEvent('drawer:open', { detail: 'menudrawer' }));
   }, false);
 </script>
-
-<style>
-  .header {
-    background-color: var(--color-header);
-    padding: var(--space-md) var(--space-lg);
-    width: 100%;
-    position: sticky;
-  }
-
-  .nav-wrapper {
-    display: flex;
-    flex-direction: row;
-    gap: var(--space-sm);
-  }
-
-  .desktop-link {
-    display: none;
-  }
-
-  .mobile-menu {
-    display: block;
-  }
-
-  @media (min-width: 641px) {
-    .desktop-link {
-      display: block;
-    }
-
-    .mobile-menu {
-      display: none;
-    }
-  }
-
-  .spacer {
-    flex-grow: 1;
-  }
-</style>
