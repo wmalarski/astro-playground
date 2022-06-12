@@ -13,7 +13,7 @@ export default defineConfig({
     preact(),
     astroI18next({
       resourcesPath: "./src/locales/",
-      i18next: { debug: true, supportedLngs: ["en", "pl"] },
+      i18next: { debug: false, supportedLngs: ["en", "pl"] },
     }),
   ],
   vite: {

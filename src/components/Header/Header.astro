@@ -1,14 +1,15 @@
 ---
 import { Icon } from "astro-icon";
-import Drawer from "../Drawer/Drawer";
-import DesktopLink from "./DesktopLink/DesktopLink.astro";
-import MobileMenu from "./MobileMenu/MobileMenu.astro";
 import { t } from "i18next";
+import DesktopLink from "./DesktopLink/DesktopLink.astro";
+import Drawer from "../Drawer/Drawer";
+import LanguageSelector from "./LanguageSelector/LanguageSelector.astro";
+import MobileMenu from "./MobileMenu/MobileMenu.astro";
 
 ---
 
 <header id="topheader" class="sticky top-0 left-0 right-0 py-3 px-4 z-10 header-stuck">
-  <nav class="flex flex-row gap-2" title="Top Navigation">
+  <nav class="flex flex-row items-center gap-2" title="Top Navigation">
     <div class="logo">
       <a href="/">{t("header.pageName")}</a>
     </div>
@@ -17,6 +18,7 @@ import { t } from "i18next";
     <DesktopLink href="/#carousel">{t("header.carousel")}</DesktopLink>
     <DesktopLink href="/#details">{t("header.details")}</DesktopLink>
     <DesktopLink href="/#contact">{t("header.contact")}</DesktopLink>
+    <LanguageSelector id="desktop-mobile-selector" />
     <button class="block sm:hidden" type="button" id="menubtn">
       <span class="visually-hidden sr-only">{t("header.open")}</span>
       <Icon name="tabler:menu-2" size={24} />

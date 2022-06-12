@@ -1,0 +1,48 @@
+---
+import i18next from "i18next";
+import ISO6391 from "iso-639-1";
+import { Icon } from "astro-icon";
+import { localizePath } from "astro-i18next";
+
+export interface Props {
+  id: string;
+}
+
+const supportedLanguages = i18next.languages;
+const currentLanguage = i18next.language;
+const { pathname } = Astro.canonicalURL;
+const { id } = Astro.props as Props;
+---
+
+<div class="language-selector relative">
+  <Icon name="tabler:language" size={20} />
+  <select id={id} class="py-1 w-7 text-transparent bg-transparent hover:bg-gray-50">
+    {supportedLanguages.map((supportedLanguage: string) => {
+    const value = localizePath(pathname, supportedLanguage);
+    const native = ISO6391.getNativeName(supportedLanguage)
+    return (
+    <option value={value} selected={supportedLanguage===currentLanguage}>
+      {native}
+    </option>
+    )
+    })}
+  </select>
+</div>
+
+<style>
+  .language-selector>svg {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    inset-inline-start: 0.4rem;
+    pointer-events: none;
+  }
+</style>
+
+<script type="module" define:vars={{ id }}>
+  const languageSelect = document.getElementById(id);
+
+  languageSelect.addEventListener('change', (event) => {
+    window.location = event.target.value;
+  }, false);
+</script>

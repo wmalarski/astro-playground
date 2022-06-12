@@ -1,14 +1,17 @@
 ---
 import { Icon } from "astro-icon";
 import { t } from "i18next";
+import LanguageSelector from "../LanguageSelector/LanguageSelector.astro";
 
 ---
 
 <nav class="flex flex-col text-center py-3 px-4 gap-3" title={t("header.title")}>
-  <header class="flex flex-row justify-between gap-2">
+  <header class="flex flex-row align-middle gap-2">
     <div class="logo flex">
       <a href="/">{t("header.pageName")}</a>
     </div>
+    <div class="flex-grow" />
+    <LanguageSelector id="mobile-lang-selector" />
     <button type="button" id="menuclose">
       <span class="visually-hidden sr-only">{t("header.close")}</span>
       <Icon name="tabler:x" size={24} />
