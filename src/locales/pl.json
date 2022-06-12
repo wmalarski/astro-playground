@@ -23,5 +23,8 @@
     "carousel": "Karuzela",
     "contact": "Kontakt",
     "details": "Szczegóły"
+  },
+  "hero": {
+    "scroll": "Scroll down"
   }
 }

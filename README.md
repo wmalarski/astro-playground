@@ -49,9 +49,9 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
   * [x] Header sticks to top when scrolling
   * [ ] Menu on hover
   * [x] Responsive
-  * [ ] Language change
+  * [x] Language change
 * Hero
-  * [ ] Scroll to next card
+  * [x] Scroll to next card
   * [ ] Carousel
   * [ ] Accordions
   * [ ] Image sliding when scrolling

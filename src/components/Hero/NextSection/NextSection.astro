@@ -1,0 +1,36 @@
+---
+import Icon from "astro-icon";
+import { t } from "i18next";
+
+---
+
+<div id="scrolldownlink" class="scroll-down-link bottom-5 left-0 right-0 flex justify-center absolute">
+  <a href="/#accordion" class=" flex flex-col items-center">
+    <Icon name="tabler:chevron-down" size={24} />
+    <span>{t("hero.scroll")}</span>
+  </a>
+</div>
+
+<script type="module">
+  const scrollDownLink = document.getElementById('scrolldownlink');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY <= 65) {
+      scrollDownLink.removeAttribute('stuck')
+    }
+    if (window.scrollY > 65) {
+      scrollDownLink.setAttribute('stuck', '')
+    }
+  })
+</script>
+
+<style>
+  .scroll-down-link {
+    opacity: 1;
+    transition: opacity 0.5s;
+  }
+
+  .scroll-down-link[stuck] {
+    opacity: 0;
+  }
+</style>
